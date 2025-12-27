@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Certified Ethical Hacking I — A comprehensive, hands-on learning path from absolute beginner to job-ready penetration tester. 300+ hours aligned with PenTest+, CEH, eJPT, and OSCP.">
+  <meta name="keywords" content="ethical hacking, penetration testing, cybersecurity, CEH, OSCP, eJPT, PenTest+, security training, hacking course">
+  <title>Certified Ethical Hacking I | Complete Learning Path</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #e0e0e0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      color: #fff;
+      padding: 3rem 0;
+    }
+
+    .logo {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      background: linear-gradient(90deg, #00ff88, #00d4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #b0b0b0;
+    }
+
+    .badges {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.1);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .badge.cert {
+      background: linear-gradient(90deg, rgba(0,255,136,0.3), rgba(0,212,255,0.3));
+      border-color: #00ff88;
+    }
+
+    .content-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #00ff88;
+      font-size: 1.8rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,255,136,0.2);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #00ff88;
+    }
+
+    .feature p {
+      color: #a0a0a0;
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, rgba(0,212,255,0.1) 100%);
+      border-radius: 10px;
+      border: 1px solid rgba(0,255,136,0.3);
+    }
+
+    .stat {
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00ff88, #00d4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stage-card {
+      background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #00ff88;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .stage-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,255,136,0.2);
+      border-color: #00d4ff;
+    }
+
+    .stage-card.foundation {
+      border-left-color: #00ff88;
+    }
+
+    .stage-card.discovery {
+      border-left-color: #00d4ff;
+    }
+
+    .stage-card.exploitation {
+      border-left-color: #ff6b6b;
+    }
+
+    .stage-card.professional {
+      border-left-color: #ffd700;
+    }
+
+    .stage-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00ff88;
+      margin-bottom: 0.5rem;
+    }
+
+    .stage-card.discovery .stage-number {
+      color: #00d4ff;
+    }
+
+    .stage-card.exploitation .stage-number {
+      color: #ff6b6b;
+    }
+
+    .stage-card.professional .stage-number {
+      color: #ffd700;
+    }
+
+    .stage-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .stage-description {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .stage-hours {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .phase-label {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .phase-label.foundation {
+      background: rgba(0,255,136,0.2);
+      color: #00ff88;
+    }
+
+    .phase-label.discovery {
+      background: rgba(0,212,255,0.2);
+      color: #00d4ff;
+    }
+
+    .phase-label.exploitation {
+      background: rgba(255,107,107,0.2);
+      color: #ff6b6b;
+    }
+
+    .phase-label.professional {
+      background: rgba(255,215,0,0.2);
+      color: #ffd700;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .cert-card {
+      background: rgba(0,0,0,0.2);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .cert-card:hover {
+      border-color: #00ff88;
+      transform: translateY(-3px);
+    }
+
+    .cert-name {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-coverage {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tool-tag {
+      background: rgba(0,255,136,0.1);
+      border: 1px solid rgba(0,255,136,0.3);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #00ff88;
+      font-family: 'Courier New', monospace;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #00ff88, #00d4ff);
+      color: #000;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,255,136,0.4);
+      margin: 0.5rem;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,212,255,0.5);
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      border: 2px solid #00ff88;
+      color: #00ff88;
+    }
+
+    .cta-button.secondary:hover {
+      background: rgba(0,255,136,0.1);
+    }
+
+    .warning-box {
+      background: rgba(255,107,107,0.1);
+      border: 1px solid rgba(255,107,107,0.3);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .warning-box h3 {
+      color: #ff6b6b;
+      margin-bottom: 0.5rem;
+    }
+
+    .warning-box p {
+      color: #a0a0a0;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer a {
+      color: #00ff88;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .terminal {
+      background: #0d1117;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      font-family: 'Courier New', monospace;
+      border: 1px solid #30363d;
+    }
+
+    .terminal-header {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .terminal-dot.red { background: #ff5f56; }
+    .terminal-dot.yellow { background: #ffbd2e; }
+    .terminal-dot.green { background: #27c93f; }
+
+    .terminal-content {
+      color: #c9d1d9;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .terminal-content .prompt {
+      color: #7ee787;
+    }
+
+    .terminal-content .command {
+      color: #79c0ff;
+    }
+
+    .terminal-content .comment {
+      color: #8b949e;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .content-card {
+        padding: 1.5rem;
+      }
+      .stat {
+        padding: 1rem;
+      }
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">🔐</div>
+      <h1>Certified Ethical Hacking I</h1>
+      <p class="subtitle">
+        A comprehensive, hands-on learning path from absolute beginner to job-ready penetration tester.
+        Zero to professional in 300+ hours.
+      </p>
+      <div class="badges">
+        <span class="badge">📚 11 Structured Stages</span>
+        <span class="badge">⏱️ 300+ Hours</span>
+        <span class="badge">🎯 Hands-On Labs</span>
+        <span class="badge cert">🏆 PenTest+ Aligned</span>
+        <span class="badge cert">🏆 CEH Aligned</span>
+        <span class="badge cert">🏆 eJPT Aligned</span>
+      </div>
+    </header>
+
+    <div class="content-card">
+      <h2>🎯 Why This Learning Path?</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🚀</div>
+          <div class="feature-title">Zero to Professional</div>
+          <p>Start with no experience. End with job-ready skills and certification preparation.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚖️</div>
+          <div class="feature-title">Ethics First</div>
+          <p>Legal and ethical foundations before technical skills. Understand the rules before you play.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔧</div>
+          <div class="feature-title">Hands-On Learning</div>
+          <p>Build real skills through lab exercises, not just theory. Every stage includes practical work.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎓</div>
+          <div class="feature-title">Certification Aligned</div>
+          <p>Mapped to PenTest+, CEH, eJPT, and OSCP objectives. Know exactly what you're preparing for.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>📊 Course Overview</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">11</div>
+          <div class="stat-label">Structured Stages</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Hours of Content</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Tools Covered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Certifications Aligned</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>📚 Learning Path Stages</h2>
+
+      <h3 style="color: #00ff88; margin: 1.5rem 0 1rem;">Phase 1: Foundation</h3>
+      <div class="stage-grid">
+        <div class="stage-card foundation">
+          <span class="phase-label foundation">Foundation</span>
+          <div class="stage-number">00</div>
+          <div class="stage-title">Course Overview & Foundations</div>
+          <div class="stage-description">Lab environment setup, legal framework introduction, penetration testing methodology overview.</div>
+          <div class="stage-hours">⏱️ 15-20 hours</div>
+        </div>
+
+        <div class="stage-card foundation">
+          <span class="phase-label foundation">Foundation</span>
+          <div class="stage-number">01</div>
+          <div class="stage-title">Ethical Hacking Fundamentals</div>
+          <div class="stage-description">CFAA deep dive, authorization, Rules of Engagement, ethics, first practice engagement.</div>
+          <div class="stage-hours">⏱️ 25-35 hours</div>
+        </div>
+
+        <div class="stage-card foundation">
+          <span class="phase-label foundation">Foundation</span>
+          <div class="stage-number">02</div>
+          <div class="stage-title">Networking for Pen Testers</div>
+          <div class="stage-description">OSI/TCP-IP models, IP addressing, protocols, Wireshark, network services.</div>
+          <div class="stage-hours">⏱️ 30-40 hours</div>
+        </div>
+      </div>
+
+      <h3 style="color: #00d4ff; margin: 2rem 0 1rem;">Phase 2: Discovery</h3>
+      <div class="stage-grid">
+        <div class="stage-card discovery">
+          <span class="phase-label discovery">Discovery</span>
+          <div class="stage-number">03</div>
+          <div class="stage-title">Reconnaissance & Information Gathering</div>
+          <div class="stage-description">OSINT techniques, Google dorking, DNS enumeration, subdomain discovery, email harvesting.</div>
+          <div class="stage-hours">⏱️ 35-45 hours</div>
+        </div>
+
+        <div class="stage-card discovery">
+          <span class="phase-label discovery">Discovery</span>
+          <div class="stage-number">04</div>
+          <div class="stage-title">Scanning & Enumeration</div>
+          <div class="stage-description">Nmap mastery, scan types, NSE scripting, service enumeration, SMB/SNMP/NFS.</div>
+          <div class="stage-hours">⏱️ 40-50 hours</div>
+        </div>
+
+        <div class="stage-card discovery">
+          <span class="phase-label discovery">Discovery</span>
+          <div class="stage-number">05</div>
+          <div class="stage-title">Vulnerability Analysis</div>
+          <div class="stage-description">CVE databases, CVSS scoring, vulnerability scanners, validation, prioritization.</div>
+          <div class="stage-hours">⏱️ 25-35 hours</div>
+        </div>
+      </div>
+
+      <h3 style="color: #ff6b6b; margin: 2rem 0 1rem;">Phase 3: Exploitation</h3>
+      <div class="stage-grid">
+        <div class="stage-card exploitation">
+          <span class="phase-label exploitation">Exploitation</span>
+          <div class="stage-number">06</div>
+          <div class="stage-title">System Hacking Fundamentals</div>
+          <div class="stage-description">Password attacks, hash cracking, John/Hashcat, privilege escalation concepts.</div>
+          <div class="stage-hours">⏱️ 35-40 hours</div>
+        </div>
+
+        <div class="stage-card exploitation">
+          <span class="phase-label exploitation">Exploitation</span>
+          <div class="stage-number">07</div>
+          <div class="stage-title">Web Application Security</div>
+          <div class="stage-description">OWASP Top 10, Burp Suite, SQL injection, XSS, CSRF, authentication attacks.</div>
+          <div class="stage-hours">⏱️ 40-50 hours</div>
+        </div>
+
+        <div class="stage-card exploitation">
+          <span class="phase-label exploitation">Exploitation</span>
+          <div class="stage-number">08</div>
+          <div class="stage-title">Exploitation Fundamentals</div>
+          <div class="stage-description">Metasploit framework, payload generation, shells, Meterpreter, exploitation workflow.</div>
+          <div class="stage-hours">⏱️ 35-45 hours</div>
+        </div>
+      </div>
+
+      <h3 style="color: #ffd700; margin: 2rem 0 1rem;">Phase 4: Professional</h3>
+      <div class="stage-grid">
+        <div class="stage-card professional">
+          <span class="phase-label professional">Professional</span>
+          <div class="stage-number">09</div>
+          <div class="stage-title">Post-Exploitation Concepts</div>
+          <div class="stage-description">Maintaining access, credential harvesting, lateral movement, pivoting, evidence collection.</div>
+          <div class="stage-hours">⏱️ 25-35 hours</div>
+        </div>
+
+        <div class="stage-card professional">
+          <span class="phase-label professional">Professional</span>
+          <div class="stage-number">10</div>
+          <div class="stage-title">Professional Practice</div>
+          <div class="stage-description">Report writing, executive summaries, client communication, career prep, capstone project.</div>
+          <div class="stage-hours">⏱️ 30-40 hours</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>🏆 Certification Alignment</h2>
+      <p style="color: #a0a0a0; margin-bottom: 1rem;">This course prepares you for major industry certifications:</p>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-name">CompTIA PenTest+</div>
+          <div class="cert-coverage">~85%</div>
+          <p style="font-size: 0.8rem; color: #888;">coverage</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">eLearnSecurity eJPT</div>
+          <div class="cert-coverage">~90%</div>
+          <p style="font-size: 0.8rem; color: #888;">coverage</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">EC-Council CEH</div>
+          <div class="cert-coverage">~80%</div>
+          <p style="font-size: 0.8rem; color: #888;">coverage</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">Offensive Security OSCP</div>
+          <div class="cert-coverage">~60%</div>
+          <p style="font-size: 0.8rem; color: #888;">foundation</p>
+        </div>
+      </div>
+      <p style="color: #666; font-size: 0.85rem; margin-top: 1rem; text-align: center;">
+        ⚠️ Certification exam objectives change. Always verify current requirements at official vendor websites.
+      </p>
+    </div>
+
+    <div class="content-card">
+      <h2>🛠️ Tools You'll Master</h2>
+      
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Reconnaissance</h4>
+      <div class="tools-list">
+        <span class="tool-tag">theHarvester</span>
+        <span class="tool-tag">Amass</span>
+        <span class="tool-tag">Sublist3r</span>
+        <span class="tool-tag">dnsrecon</span>
+        <span class="tool-tag">Shodan</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Scanning & Enumeration</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Nmap</span>
+        <span class="tool-tag">Nikto</span>
+        <span class="tool-tag">Gobuster</span>
+        <span class="tool-tag">enum4linux</span>
+        <span class="tool-tag">smbclient</span>
+        <span class="tool-tag">Wireshark</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Exploitation</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Metasploit</span>
+        <span class="tool-tag">Msfvenom</span>
+        <span class="tool-tag">Burp Suite</span>
+        <span class="tool-tag">SQLMap</span>
+        <span class="tool-tag">Hydra</span>
+        <span class="tool-tag">Netcat</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Password Attacks</h4>
+      <div class="tools-list">
+        <span class="tool-tag">John the Ripper</span>
+        <span class="tool-tag">Hashcat</span>
+        <span class="tool-tag">CeWL</span>
+        <span class="tool-tag">Crunch</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Post-Exploitation</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Meterpreter</span>
+        <span class="tool-tag">LinPEAS</span>
+        <span class="tool-tag">WinPEAS</span>
+        <span class="tool-tag">Mimikatz</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>🚀 Quick Start</h2>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+        </div>
+        <div class="terminal-content">
+          <span class="comment"># Clone the repository</span><br>
+          <span class="prompt">$</span> <span class="command">git clone https://github.com/YOUR-USERNAME/certified-ethical-hacking-1.git</span><br><br>
+          <span class="comment"># Navigate to the course</span><br>
+          <span class="prompt">$</span> <span class="command">cd certified-ethical-hacking-1</span><br><br>
+          <span class="comment"># Start with Stage 00</span><br>
+          <span class="prompt">$</span> <span class="command">cat course_material/Stage_00_Course_Overview_and_Foundations.md</span><br><br>
+          <span class="comment"># Set up your lab and begin learning!</span><br>
+          <span class="prompt">$</span> <span class="command">echo "Happy Hacking (Ethically)!"</span><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>📋 Prerequisites</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">💻</div>
+          <div class="feature-title">Hardware</div>
+          <p>16GB+ RAM recommended, 100GB+ free storage, virtualization-capable CPU</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🖥️</div>
+          <div class="feature-title">Software</div>
+          <p>VirtualBox or VMware, Kali Linux, Metasploitable 2</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏰</div>
+          <div class="feature-title">Time</div>
+          <p>10-15 hours per week recommended. 6-10 months to completion.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧠</div>
+          <div class="feature-title">Experience</div>
+          <p>None required! Course starts from absolute zero.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <h3>⚠️ Legal & Ethical Notice</h3>
+        <p>This course is for educational purposes only. Only test systems you own or have explicit written permission to test. Unauthorized access to computer systems is illegal. By using this material, you agree to use it ethically and legally.</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2 style="margin-bottom: 1.5rem; color: #fff;">Ready to Start Your Ethical Hacking Journey?</h2>
+      <a href="https://github.com/YOUR-USERNAME/certified-ethical-hacking-1/blob/main/README.md" class="cta-button" target="_blank" rel="noopener noreferrer">
+        View on GitHub →
+      </a>
+      <a href="https://github.com/YOUR-USERNAME/certified-ethical-hacking-1/blob/main/course_material/Stage_00_Course_Overview_and_Foundations.md" class="cta-button secondary" target="_blank" rel="noopener noreferrer">
+        Start Stage 00
+      </a>
+    </div>
+
+    <footer>
+      <p>
+        <strong>Certified Ethical Hacking I Learning Path</strong><br>
+        Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">
+        Learn Ethically • Practice Safely • Protect Systems
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
