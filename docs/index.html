@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Certified Ethical Hacking I — A comprehensive, hands-on learning path from absolute beginner to job-ready penetration tester. 300+ hours aligned with PenTest+, CEH, eJPT, and OSCP.">
-  <meta name="keywords" content="ethical hacking, penetration testing, cybersecurity, CEH, OSCP, eJPT, PenTest+, security training, hacking course">
+  <meta name="description" content="Certified Ethical Hacking I — A comprehensive, hands-on learning path from absolute beginner to job-ready penetration tester. 500+ hours covering networking, web apps, cloud, mobile, IoT, wireless, and more. Aligned with PenTest+, CEH, eJPT, and OSCP.">
+  <meta name="keywords" content="ethical hacking, penetration testing, cybersecurity, CEH, OSCP, eJPT, PenTest+, security training, hacking course, cloud security, mobile security, wireless hacking, malware analysis">
   <title>Certified Ethical Hacking I | Complete Learning Path</title>
 
   <style>
@@ -195,6 +195,14 @@
       border-left-color: #ff6b6b;
     }
 
+    .stage-card.advanced {
+      border-left-color: #bf5af2;
+    }
+
+    .stage-card.specialized {
+      border-left-color: #ff9f0a;
+    }
+
     .stage-card.professional {
       border-left-color: #ffd700;
     }
@@ -212,6 +220,14 @@
 
     .stage-card.exploitation .stage-number {
       color: #ff6b6b;
+    }
+
+    .stage-card.advanced .stage-number {
+      color: #bf5af2;
+    }
+
+    .stage-card.specialized .stage-number {
+      color: #ff9f0a;
     }
 
     .stage-card.professional .stage-number {
@@ -261,6 +277,16 @@
       color: #ff6b6b;
     }
 
+    .phase-label.advanced {
+      background: rgba(191,90,242,0.2);
+      color: #bf5af2;
+    }
+
+    .phase-label.specialized {
+      background: rgba(255,159,10,0.2);
+      color: #ff9f0a;
+    }
+
     .phase-label.professional {
       background: rgba(255,215,0,0.2);
       color: #ffd700;
@@ -268,7 +294,7 @@
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
       margin-top: 1.5rem;
     }
@@ -291,6 +317,7 @@
       font-weight: 600;
       color: #fff;
       margin-bottom: 0.5rem;
+      font-size: 0.9rem;
     }
 
     .cert-coverage {
@@ -428,6 +455,39 @@
       color: #8b949e;
     }
 
+    .phase-header {
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid;
+    }
+
+    .phase-header.foundation { border-color: #00ff88; color: #00ff88; }
+    .phase-header.discovery { border-color: #00d4ff; color: #00d4ff; }
+    .phase-header.exploitation { border-color: #ff6b6b; color: #ff6b6b; }
+    .phase-header.advanced { border-color: #bf5af2; color: #bf5af2; }
+    .phase-header.specialized { border-color: #ff9f0a; color: #ff9f0a; }
+    .phase-header.professional { border-color: #ffd700; color: #ffd700; }
+
+    .learning-path-visual {
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      white-space: pre;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .learning-path-visual .highlight-green { color: #00ff88; }
+    .learning-path-visual .highlight-cyan { color: #00d4ff; }
+    .learning-path-visual .highlight-red { color: #ff6b6b; }
+    .learning-path-visual .highlight-purple { color: #bf5af2; }
+    .learning-path-visual .highlight-orange { color: #ff9f0a; }
+    .learning-path-visual .highlight-gold { color: #ffd700; }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
@@ -444,6 +504,10 @@
       .stat-number {
         font-size: 2rem;
       }
+      .learning-path-visual {
+        font-size: 0.6rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -456,12 +520,13 @@
       <h1>Certified Ethical Hacking I</h1>
       <p class="subtitle">
         A comprehensive, hands-on learning path from absolute beginner to job-ready penetration tester.
-        Zero to professional in 300+ hours.
+        Zero to professional in 500+ hours — covering networks, web apps, cloud, mobile, IoT, wireless, and more.
       </p>
       <div class="badges">
-        <span class="badge">📚 11 Structured Stages</span>
-        <span class="badge">⏱️ 300+ Hours</span>
-        <span class="badge">🎯 Hands-On Labs</span>
+        <span class="badge">📚 17 Structured Stages</span>
+        <span class="badge">⏱️ 500+ Hours</span>
+        <span class="badge">🎯 100+ Hands-On Labs</span>
+        <span class="badge">🐍 50+ Python Examples</span>
         <span class="badge cert">🏆 PenTest+ Aligned</span>
         <span class="badge cert">🏆 CEH Aligned</span>
         <span class="badge cert">🏆 eJPT Aligned</span>
@@ -474,7 +539,7 @@
         <div class="feature">
           <div class="feature-icon">🚀</div>
           <div class="feature-title">Zero to Professional</div>
-          <p>Start with no experience. End with job-ready skills and certification preparation.</p>
+          <p>Start with no experience. End with job-ready skills across all modern attack surfaces.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">⚖️</div>
@@ -484,12 +549,12 @@
         <div class="feature">
           <div class="feature-icon">🔧</div>
           <div class="feature-title">Hands-On Learning</div>
-          <p>Build real skills through lab exercises, not just theory. Every stage includes practical work.</p>
+          <p>100+ lab exercises with Python code examples. Build real skills, not just theory knowledge.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon">🎓</div>
-          <div class="feature-title">Certification Aligned</div>
-          <p>Mapped to PenTest+, CEH, eJPT, and OSCP objectives. Know exactly what you're preparing for.</p>
+          <div class="feature-icon">☁️</div>
+          <div class="feature-title">Modern Coverage</div>
+          <p>Cloud, mobile, IoT, wireless, and more. Learn skills relevant to today's attack surfaces.</p>
         </div>
       </div>
     </div>
@@ -498,28 +563,71 @@
       <h2>📊 Course Overview</h2>
       <div class="stats">
         <div class="stat">
-          <div class="stat-number">11</div>
+          <div class="stat-number">17</div>
           <div class="stat-label">Structured Stages</div>
         </div>
         <div class="stat">
-          <div class="stat-number">300+</div>
+          <div class="stat-number">500+</div>
           <div class="stat-label">Hours of Content</div>
         </div>
         <div class="stat">
-          <div class="stat-number">50+</div>
+          <div class="stat-number">100+</div>
           <div class="stat-label">Tools Covered</div>
         </div>
         <div class="stat">
-          <div class="stat-number">4</div>
+          <div class="stat-number">6</div>
           <div class="stat-label">Certifications Aligned</div>
         </div>
+      </div>
+
+      <div class="learning-path-visual">
+                                <span class="highlight-gold">┌─────────────────────────┐</span>
+                                <span class="highlight-gold">│    PROFESSIONAL         │</span>
+                                <span class="highlight-gold">│    Stage 16-17          │</span>
+                                <span class="highlight-gold">│  Social Eng & Reports   │</span>
+                                <span class="highlight-gold">└───────────┬─────────────┘</span>
+                                            │
+            ┌───────────────────────────────┼───────────────────────────────┐
+            │                               │                               │
+  <span class="highlight-orange">┌─────────┴─────────┐</span>       <span class="highlight-orange">┌───────────┴───────────┐</span>       <span class="highlight-orange">┌─────────┴─────────┐</span>
+  <span class="highlight-orange">│   SPECIALIZED     │</span>       <span class="highlight-orange">│     SPECIALIZED       │</span>       <span class="highlight-orange">│   SPECIALIZED     │</span>
+  <span class="highlight-orange">│   Stage 12        │</span>       <span class="highlight-orange">│     Stage 13-14       │</span>       <span class="highlight-orange">│   Stage 15        │</span>
+  <span class="highlight-orange">│   Mobile & IoT    │</span>       <span class="highlight-orange">│   Cloud & Crypto      │</span>       <span class="highlight-orange">│ Malware Analysis  │</span>
+  <span class="highlight-orange">└─────────┬─────────┘</span>       <span class="highlight-orange">└───────────┬───────────┘</span>       <span class="highlight-orange">└─────────┬─────────┘</span>
+            │                               │                               │
+            └───────────────────────────────┼───────────────────────────────┘
+                                            │
+                                <span class="highlight-purple">┌───────────┴───────────┐</span>
+                                <span class="highlight-purple">│  ADVANCED OPERATIONS  │</span>
+                                <span class="highlight-purple">│     Stage 09-11       │</span>
+                                <span class="highlight-purple">│ Post-Exploit, Sniff,  │</span>
+                                <span class="highlight-purple">│      Wireless         │</span>
+                                <span class="highlight-purple">└───────────┬───────────┘</span>
+                                            │
+                                <span class="highlight-red">┌───────────┴───────────┐</span>
+                                <span class="highlight-red">│     EXPLOITATION      │</span>
+                                <span class="highlight-red">│     Stage 06-08       │</span>
+                                <span class="highlight-red">│  Systems, Web, Tools  │</span>
+                                <span class="highlight-red">└───────────┬───────────┘</span>
+                                            │
+                                <span class="highlight-cyan">┌───────────┴───────────┐</span>
+                                <span class="highlight-cyan">│      DISCOVERY        │</span>
+                                <span class="highlight-cyan">│     Stage 03-05       │</span>
+                                <span class="highlight-cyan">│   Recon, Scan, Vuln   │</span>
+                                <span class="highlight-cyan">└───────────┬───────────┘</span>
+                                            │
+                                <span class="highlight-green">┌───────────┴───────────┐</span>
+                                <span class="highlight-green">│      FOUNDATION       │</span>
+                                <span class="highlight-green">│     Stage 00-02       │</span>
+                                <span class="highlight-green">│   Ethics, Networking  │</span>
+                                <span class="highlight-green">└───────────────────────┘</span>
       </div>
     </div>
 
     <div class="content-card">
       <h2>📚 Learning Path Stages</h2>
 
-      <h3 style="color: #00ff88; margin: 1.5rem 0 1rem;">Phase 1: Foundation</h3>
+      <h3 class="phase-header foundation">Phase 1: Foundation (70-95 hours)</h3>
       <div class="stage-grid">
         <div class="stage-card foundation">
           <span class="phase-label foundation">Foundation</span>
@@ -546,7 +654,7 @@
         </div>
       </div>
 
-      <h3 style="color: #00d4ff; margin: 2rem 0 1rem;">Phase 2: Discovery</h3>
+      <h3 class="phase-header discovery">Phase 2: Discovery (100-130 hours)</h3>
       <div class="stage-grid">
         <div class="stage-card discovery">
           <span class="phase-label discovery">Discovery</span>
@@ -573,7 +681,7 @@
         </div>
       </div>
 
-      <h3 style="color: #ff6b6b; margin: 2rem 0 1rem;">Phase 3: Exploitation</h3>
+      <h3 class="phase-header exploitation">Phase 3: Exploitation (110-135 hours)</h3>
       <div class="stage-grid">
         <div class="stage-card exploitation">
           <span class="phase-label exploitation">Exploitation</span>
@@ -600,19 +708,81 @@
         </div>
       </div>
 
-      <h3 style="color: #ffd700; margin: 2rem 0 1rem;">Phase 4: Professional</h3>
+      <h3 class="phase-header advanced">Phase 4: Advanced Operations (90-115 hours)</h3>
       <div class="stage-grid">
-        <div class="stage-card professional">
-          <span class="phase-label professional">Professional</span>
+        <div class="stage-card advanced">
+          <span class="phase-label advanced">Advanced</span>
           <div class="stage-number">09</div>
-          <div class="stage-title">Post-Exploitation Concepts</div>
+          <div class="stage-title">Post-Exploitation</div>
           <div class="stage-description">Maintaining access, credential harvesting, lateral movement, pivoting, evidence collection.</div>
           <div class="stage-hours">⏱️ 25-35 hours</div>
         </div>
 
+        <div class="stage-card advanced">
+          <span class="phase-label advanced">Advanced</span>
+          <div class="stage-number">10</div>
+          <div class="stage-title">Sniffing & Evasion</div>
+          <div class="stage-description">Traffic analysis, MITM attacks, ARP spoofing, AV evasion, IDS/IPS bypass techniques.</div>
+          <div class="stage-hours">⏱️ 35-45 hours</div>
+        </div>
+
+        <div class="stage-card advanced">
+          <span class="phase-label advanced">Advanced</span>
+          <div class="stage-number">11</div>
+          <div class="stage-title">Wireless Network Hacking</div>
+          <div class="stage-description">WiFi security, WPA/WPA2/WPA3, handshake capture, rogue APs, wireless attacks.</div>
+          <div class="stage-hours">⏱️ 30-40 hours</div>
+        </div>
+      </div>
+
+      <h3 class="phase-header specialized">Phase 5: Specialized Domains (120-155 hours)</h3>
+      <div class="stage-grid">
+        <div class="stage-card specialized">
+          <span class="phase-label specialized">Specialized</span>
+          <div class="stage-number">12</div>
+          <div class="stage-title">Mobile & IoT Security</div>
+          <div class="stage-description">Android/iOS testing, APK analysis, Frida, firmware extraction, BLE, MQTT protocols.</div>
+          <div class="stage-hours">⏱️ 35-45 hours</div>
+        </div>
+
+        <div class="stage-card specialized">
+          <span class="phase-label specialized">Specialized</span>
+          <div class="stage-number">13</div>
+          <div class="stage-title">Cloud Security</div>
+          <div class="stage-description">AWS/Azure/GCP security, misconfigurations, container security, Kubernetes attacks.</div>
+          <div class="stage-hours">⏱️ 30-40 hours</div>
+        </div>
+
+        <div class="stage-card specialized">
+          <span class="phase-label specialized">Specialized</span>
+          <div class="stage-number">14</div>
+          <div class="stage-title">Cryptography Fundamentals</div>
+          <div class="stage-description">Symmetric/asymmetric encryption, hashing, PKI, TLS/SSL, cryptographic attacks.</div>
+          <div class="stage-hours">⏱️ 25-35 hours</div>
+        </div>
+
+        <div class="stage-card specialized">
+          <span class="phase-label specialized">Specialized</span>
+          <div class="stage-number">15</div>
+          <div class="stage-title">Malware Analysis & Attack Vectors</div>
+          <div class="stage-description">Static/dynamic analysis, YARA rules, sandboxing, phishing analysis, exploit concepts.</div>
+          <div class="stage-hours">⏱️ 30-35 hours</div>
+        </div>
+      </div>
+
+      <h3 class="phase-header professional">Phase 6: Professional (55-70 hours)</h3>
+      <div class="stage-grid">
         <div class="stage-card professional">
           <span class="phase-label professional">Professional</span>
-          <div class="stage-number">10</div>
+          <div class="stage-number">16</div>
+          <div class="stage-title">Social Engineering & Physical Security</div>
+          <div class="stage-description">OSINT for SE, phishing campaigns, vishing, pretexting, physical security assessments.</div>
+          <div class="stage-hours">⏱️ 25-30 hours</div>
+        </div>
+
+        <div class="stage-card professional">
+          <span class="phase-label professional">Professional</span>
+          <div class="stage-number">17</div>
           <div class="stage-title">Professional Practice</div>
           <div class="stage-description">Report writing, executive summaries, client communication, career prep, capstone project.</div>
           <div class="stage-hours">⏱️ 30-40 hours</div>
@@ -626,22 +796,32 @@
       <div class="cert-grid">
         <div class="cert-card">
           <div class="cert-name">CompTIA PenTest+</div>
-          <div class="cert-coverage">~85%</div>
-          <p style="font-size: 0.8rem; color: #888;">coverage</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-name">eLearnSecurity eJPT</div>
           <div class="cert-coverage">~90%</div>
           <p style="font-size: 0.8rem; color: #888;">coverage</p>
         </div>
         <div class="cert-card">
-          <div class="cert-name">EC-Council CEH</div>
-          <div class="cert-coverage">~80%</div>
+          <div class="cert-name">eJPT</div>
+          <div class="cert-coverage">~95%</div>
           <p style="font-size: 0.8rem; color: #888;">coverage</p>
         </div>
         <div class="cert-card">
-          <div class="cert-name">Offensive Security OSCP</div>
-          <div class="cert-coverage">~60%</div>
+          <div class="cert-name">EC-Council CEH</div>
+          <div class="cert-coverage">~85%</div>
+          <p style="font-size: 0.8rem; color: #888;">coverage</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">CompTIA CySA+</div>
+          <div class="cert-coverage">~70%</div>
+          <p style="font-size: 0.8rem; color: #888;">coverage</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">OSCP</div>
+          <div class="cert-coverage">~70%</div>
+          <p style="font-size: 0.8rem; color: #888;">foundation</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">AWS Security</div>
+          <div class="cert-coverage">~40%</div>
           <p style="font-size: 0.8rem; color: #888;">foundation</p>
         </div>
       </div>
@@ -653,23 +833,28 @@
     <div class="content-card">
       <h2>🛠️ Tools You'll Master</h2>
       
-      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Reconnaissance</h4>
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Reconnaissance & OSINT</h4>
       <div class="tools-list">
         <span class="tool-tag">theHarvester</span>
+        <span class="tool-tag">Maltego</span>
+        <span class="tool-tag">Recon-ng</span>
         <span class="tool-tag">Amass</span>
         <span class="tool-tag">Sublist3r</span>
         <span class="tool-tag">dnsrecon</span>
         <span class="tool-tag">Shodan</span>
+        <span class="tool-tag">SpiderFoot</span>
       </div>
 
       <h4 style="color: #888; margin: 1rem 0 0.5rem;">Scanning & Enumeration</h4>
       <div class="tools-list">
         <span class="tool-tag">Nmap</span>
+        <span class="tool-tag">Masscan</span>
         <span class="tool-tag">Nikto</span>
         <span class="tool-tag">Gobuster</span>
         <span class="tool-tag">enum4linux</span>
         <span class="tool-tag">smbclient</span>
         <span class="tool-tag">Wireshark</span>
+        <span class="tool-tag">Nessus</span>
       </div>
 
       <h4 style="color: #888; margin: 1rem 0 0.5rem;">Exploitation</h4>
@@ -680,6 +865,7 @@
         <span class="tool-tag">SQLMap</span>
         <span class="tool-tag">Hydra</span>
         <span class="tool-tag">Netcat</span>
+        <span class="tool-tag">searchsploit</span>
       </div>
 
       <h4 style="color: #888; margin: 1rem 0 0.5rem;">Password Attacks</h4>
@@ -688,6 +874,7 @@
         <span class="tool-tag">Hashcat</span>
         <span class="tool-tag">CeWL</span>
         <span class="tool-tag">Crunch</span>
+        <span class="tool-tag">Mimikatz</span>
       </div>
 
       <h4 style="color: #888; margin: 1rem 0 0.5rem;">Post-Exploitation</h4>
@@ -695,7 +882,58 @@
         <span class="tool-tag">Meterpreter</span>
         <span class="tool-tag">LinPEAS</span>
         <span class="tool-tag">WinPEAS</span>
-        <span class="tool-tag">Mimikatz</span>
+        <span class="tool-tag">BloodHound</span>
+        <span class="tool-tag">Empire</span>
+        <span class="tool-tag">Covenant</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Wireless Hacking</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Aircrack-ng</span>
+        <span class="tool-tag">Wifite</span>
+        <span class="tool-tag">Kismet</span>
+        <span class="tool-tag">hcxtools</span>
+        <span class="tool-tag">Bettercap</span>
+        <span class="tool-tag">hostapd-wpe</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Mobile & IoT</h4>
+      <div class="tools-list">
+        <span class="tool-tag">APKTool</span>
+        <span class="tool-tag">jadx</span>
+        <span class="tool-tag">Frida</span>
+        <span class="tool-tag">Objection</span>
+        <span class="tool-tag">MobSF</span>
+        <span class="tool-tag">binwalk</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Cloud Security</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Prowler</span>
+        <span class="tool-tag">ScoutSuite</span>
+        <span class="tool-tag">Pacu</span>
+        <span class="tool-tag">CloudSploit</span>
+        <span class="tool-tag">kube-hunter</span>
+        <span class="tool-tag">Trivy</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Malware Analysis</h4>
+      <div class="tools-list">
+        <span class="tool-tag">YARA</span>
+        <span class="tool-tag">Ghidra</span>
+        <span class="tool-tag">x64dbg</span>
+        <span class="tool-tag">Process Monitor</span>
+        <span class="tool-tag">PEStudio</span>
+        <span class="tool-tag">Cuckoo</span>
+      </div>
+
+      <h4 style="color: #888; margin: 1rem 0 0.5rem;">Social Engineering</h4>
+      <div class="tools-list">
+        <span class="tool-tag">Gophish</span>
+        <span class="tool-tag">SET</span>
+        <span class="tool-tag">King Phisher</span>
+        <span class="tool-tag">Evilginx2</span>
+        <span class="tool-tag">Proxmark3</span>
       </div>
     </div>
 
@@ -709,9 +947,9 @@
         </div>
         <div class="terminal-content">
           <span class="comment"># Clone the repository</span><br>
-          <span class="prompt">$</span> <span class="command">git clone https://github.com/YOUR-USERNAME/certified-ethical-hacking-1.git</span><br><br>
+          <span class="prompt">$</span> <span class="command">git clone https://github.com/P0GL0L/EthicalHacking_1.git</span><br><br>
           <span class="comment"># Navigate to the course</span><br>
-          <span class="prompt">$</span> <span class="command">cd certified-ethical-hacking-1</span><br><br>
+          <span class="prompt">$</span> <span class="command">cd EthicalHacking_1</span><br><br>
           <span class="comment"># Start with Stage 00</span><br>
           <span class="prompt">$</span> <span class="command">cat course_material/Stage_00_Course_Overview_and_Foundations.md</span><br><br>
           <span class="comment"># Set up your lab and begin learning!</span><br>
@@ -726,17 +964,17 @@
         <div class="feature">
           <div class="feature-icon">💻</div>
           <div class="feature-title">Hardware</div>
-          <p>16GB+ RAM recommended, 100GB+ free storage, virtualization-capable CPU</p>
+          <p>16GB+ RAM recommended, 200GB+ free storage, virtualization-capable CPU</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🖥️</div>
           <div class="feature-title">Software</div>
-          <p>VirtualBox or VMware, Kali Linux, Metasploitable 2</p>
+          <p>VirtualBox or VMware, Kali Linux, Metasploitable 2, and more target VMs</p>
         </div>
         <div class="feature">
           <div class="feature-icon">⏰</div>
           <div class="feature-title">Time</div>
-          <p>10-15 hours per week recommended. 6-10 months to completion.</p>
+          <p>10-15 hours per week recommended. 8-14 months to completion.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🧠</div>
@@ -753,7 +991,7 @@
 
     <div class="cta-section">
       <h2 style="margin-bottom: 1.5rem; color: #fff;">Ready to Start Your Ethical Hacking Journey?</h2>
-      <a href="https://github.com/P0GL0L/EthicalHacking_1/blob/master/README.md" class="cta-button" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/P0GL0L/EthicalHacking_1" class="cta-button" target="_blank" rel="noopener noreferrer">
         View on GitHub →
       </a>
       <a href="https://github.com/P0GL0L/EthicalHacking_1/blob/master/course_material/Stage_00_Course_Overview_and_Foundations.md" class="cta-button secondary" target="_blank" rel="noopener noreferrer">
@@ -767,7 +1005,7 @@
         Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
       </p>
       <p style="margin-top: 1rem; font-size: 0.9rem;">
-        Learn Ethically • Practice Safely • Protect Systems 
+        Learn Ethically • Practice Safely • Protect Systems 🔐
       </p>
     </footer>
 
